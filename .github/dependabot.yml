@@ -28,3 +28,58 @@ updates:
         update-types:
           - "minor"
           - "patch"
+
+  - package-ecosystem: docker
+    directory: /cmd/gcbuilder
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/build/cross/default
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/build/debian-base/bookworm
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/build/distroless-iptables/distroless-bookworm
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/build/distroless-iptables/distroless-bullseye
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/build/go-runner
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /images/build/go-runner
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/build/setcap
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/k8s-cloud-builder
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/releng/ci
+    schedule:
+      interval: daily
+
+  - package-ecosystem: docker
+    directory: /images/releng/k8s-ci-builder
+    schedule:
+      interval: daily
